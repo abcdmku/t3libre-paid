@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="900" height="420" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .box { fill: #f6f8fa; stroke: #d0d7de; }
+    .title { fill: #1f2328; font-size: 15px; font-weight: 600; }
+    .sub { fill: #59636e; font-size: 12px; }
+    .life { stroke: #d0d7de; stroke-dasharray: 4 5; }
+    .arrow { stroke: #0969da; stroke-width: 1.6; fill: none; }
+    .back { stroke: #1a7f37; }
+    .link { stroke: #8250df; stroke-dasharray: 6 4; }
+    .head { fill: #0969da; }
+    .head.back { fill: #1a7f37; stroke: none; }
+    .head.link { fill: #8250df; stroke: none; }
+    .label { fill: #1f2328; font-size: 13px; }
+    .code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 12px; fill: #59636e; }
+    .num { fill: #ffffff; font-size: 11px; font-weight: 700; }
+    .dot { fill: #0969da; }
+    .dot.back { fill: #1a7f37; }
+    .dot.link { fill: #8250df; }
+
+    .bg { fill: #0d1117; }
+    .box { fill: #161b22; stroke: #30363d; }
+    .title, .label { fill: #e6edf3; }
+    .sub, .code { fill: #8d96a0; }
+    .life { stroke: #30363d; }
+    .arrow { stroke: #4493f8; }
+    .head, .dot { fill: #4493f8; }
+    .back { stroke: #3fb950; }
+    .head.back, .dot.back { fill: #3fb950; }
+    .link { stroke: #ab7df8; }
+    .head.link, .dot.link { fill: #ab7df8; }
+    .num { fill: #0d1117; }
+  </style>
+  <rect class="bg" width="900" height="420" rx="12"/>
+
+  <!-- participants -->
+  <rect class="box" x="40" y="24" width="210" height="58" rx="10"/>
+  <text class="title" x="145" y="49" text-anchor="middle">Your web app</text>
+  <text class="sub" x="145" y="68" text-anchor="middle">runs in T3's browser panel</text>
+
+  <rect class="box" x="345" y="24" width="210" height="58" rx="10"/>
+  <text class="title" x="450" y="49" text-anchor="middle">T3 server</text>
+  <text class="sub" x="450" y="68" text-anchor="middle">already ships all of this</text>
+
+  <rect class="box" x="650" y="24" width="210" height="58" rx="10"/>
+  <text class="title" x="755" y="49" text-anchor="middle">Agent thread</text>
+  <text class="sub" x="755" y="68" text-anchor="middle">Claude, Codex, Grok, ...</text>
+
+  <line class="life" x1="145" y1="82" x2="145" y2="400"/>
+  <line class="life" x1="450" y1="82" x2="450" y2="400"/>
+  <line class="life" x1="755" y1="82" x2="755" y2="400"/>
+
+  <!-- 1 -->
+  <circle class="dot" cx="160" cy="112" r="9"/><text class="num" x="160" y="116" text-anchor="middle">1</text>
+  <text class="label" x="176" y="108">swap pairing code for a token</text>
+  <text class="code" x="176" y="124">POST /oauth/token</text>
+  <path class="arrow" d="M145 134 H442"/><path class="head" d="M450 134 l-9 -5 v10 z"/>
+
+  <!-- 2 -->
+  <circle class="dot" cx="160" cy="166" r="9"/><text class="num" x="160" y="170" text-anchor="middle">2</text>
+  <text class="label" x="176" y="162">open the websocket with a one-time ticket</text>
+  <text class="code" x="176" y="178">/ws?wsTicket=...</text>
+  <path class="arrow" d="M145 188 H442"/><path class="head" d="M450 188 l-9 -5 v10 z"/>
+
+  <!-- 3 -->
+  <circle class="dot" cx="160" cy="220" r="9"/><text class="num" x="160" y="224" text-anchor="middle">3</text>
+  <text class="label" x="176" y="216">upload the drawing, start a thread</text>
+  <text class="code" x="176" y="232">createUploadUrl, launchThread</text>
+  <path class="arrow" d="M145 242 H442"/><path class="head" d="M450 242 l-9 -5 v10 z"/>
+  <path class="arrow" d="M450 242 H747"/><path class="head" d="M755 242 l-9 -5 v10 z"/>
+  <text class="sub" x="602" y="234" text-anchor="middle">image + note</text>
+
+  <!-- 4 -->
+  <circle class="dot back" cx="160" cy="280" r="9"/><text class="num" x="160" y="284" text-anchor="middle">4</text>
+  <text class="label" x="176" y="276">status and reply stream back</text>
+  <text class="code" x="176" y="292">subscribeThread</text>
+  <path class="arrow back" d="M755 302 H158"/><path class="head back" d="M145 302 l9 -5 v10 z"/>
+
+  <!-- 5 -->
+  <circle class="dot link" cx="160" cy="342" r="9"/><text class="num" x="160" y="346" text-anchor="middle">5</text>
+  <text class="label" x="176" y="338">link opens the thread in T3</text>
+  <text class="code" x="176" y="354">t3code://threads/&lt;env&gt;/&lt;thread&gt;</text>
+  <path class="arrow link" d="M145 368 H747"/><path class="head link" d="M755 368 l-9 -5 v10 z"/>
+</svg>
