@@ -64,11 +64,11 @@
 
   <!-- 3 -->
   <circle class="dot" cx="160" cy="220" r="9"/><text class="num" x="160" y="224" text-anchor="middle">3</text>
-  <text class="label" x="176" y="216">upload the drawing, start a thread</text>
+  <text class="label" x="176" y="216">start a thread, optionally with an image</text>
   <text class="code" x="176" y="232">createUploadUrl, launchThread</text>
   <path class="arrow" d="M145 242 H442"/><path class="head" d="M450 242 l-9 -5 v10 z"/>
   <path class="arrow" d="M450 242 H747"/><path class="head" d="M755 242 l-9 -5 v10 z"/>
-  <text class="sub" x="602" y="234" text-anchor="middle">image + note</text>
+  <text class="sub" x="602" y="234" text-anchor="middle">first message</text>
 
   <!-- 4 -->
   <circle class="dot back" cx="160" cy="280" r="9"/><text class="num" x="160" y="284" text-anchor="middle">4</text>
